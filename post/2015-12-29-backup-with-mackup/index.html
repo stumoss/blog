@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Mac OS X Backup System &middot; Stuart Moss&#39; Blog </title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://stumoss.github.io/blog/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+	</head>
+
+	<body>
+		<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://stumoss.github.io/blog/>stu@stunix ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://stumoss.github.io/blog/">/home/stu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog/post">~/posts</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+		<div class="container wrapper">
+			<h1><a href="https://stumoss.github.io/blog/post/2015-12-29-backup-with-mackup/">Mac OS X Backup System</a></h1>
+			<span class="post-date">Dec 29, 2015 </span>
+			<div class="post-content">
+				
+
+<p>I recently expanded my collection of Mac OS X devices to include a new desktop
+system and immediately became irritated by having to re-install and
+re-configure all of my software. I realise this is a common problem and decided
+to investigate further. I came across an
+<a href="http://sysadvent.blogspot.co.uk/2015/12/day-14-manage-your-mac-without-going.html">article</a>
+which basically described a near perfect solution to this problem. This blog
+post is more of a personal reminder of how to backup my Mac OS X devices.</p>
+
+<h4 id="configuration">Configuration</h4>
+
+<p>Configuration of <a href="https://github.com/lra/mackup">Mackup</a> is incredibly simple
+(which is one of the main reasons I like it) as all you need to do is provide a
+valid configuration file and then execute one simple command. Your
+configuration file can be empty if you wish to use the ~/Dropbox/Mackup
+directory for you backups. If, like me, you prefer to avoid putting all your
+data on a remote server that you don&rsquo;t own then you can tweak the default
+configuration file ~/.mackup.cfg to use a local folder. My particular
+~/.mackup.cfg file is as follows:</p>
+
+<pre><code>[storage]
+engine = file_system
+path = Documents/Computing
+</code></pre>
+
+<h4 id="execution">Execution</h4>
+
+<p>Once you have your configuration in place the following two commands are fairly
+self explanatory:</p>
+
+<pre><code>$ mackup backup
+$ mackup restore
+</code></pre>
+
+			</div>
+			<div class="post-comments">
+				
+			</div>
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
+<p>Copyright &copy; 2016  -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and 
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+	</body>

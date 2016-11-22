@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stuart Moss&#39; Blog</title>
+    <link>https://stumoss.github.io/blog/tags/homebrew/index.xml</link>
+    <description>Recent content on Stuart Moss&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <atom:link href="https://stumoss.github.io/blog/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mac OS X Backup System</title>
+      <link>https://stumoss.github.io/blog/post/2015-12-29-backup-with-mackup/</link>
+      <pubDate>Tue, 29 Dec 2015 22:50:53 +0000</pubDate>
+      
+      <guid>https://stumoss.github.io/blog/post/2015-12-29-backup-with-mackup/</guid>
+      <description>
+
+&lt;p&gt;I recently expanded my collection of Mac OS X devices to include a new desktop
+system and immediately became irritated by having to re-install and
+re-configure all of my software. I realise this is a common problem and decided
+to investigate further. I came across an
+&lt;a href=&#34;http://sysadvent.blogspot.co.uk/2015/12/day-14-manage-your-mac-without-going.html&#34;&gt;article&lt;/a&gt;
+which basically described a near perfect solution to this problem. This blog
+post is more of a personal reminder of how to backup my Mac OS X devices.&lt;/p&gt;
+
+&lt;h4 id=&#34;configuration&#34;&gt;Configuration&lt;/h4&gt;
+
+&lt;p&gt;Configuration of &lt;a href=&#34;https://github.com/lra/mackup&#34;&gt;Mackup&lt;/a&gt; is incredibly simple
+(which is one of the main reasons I like it) as all you need to do is provide a
+valid configuration file and then execute one simple command. Your
+configuration file can be empty if you wish to use the ~/Dropbox/Mackup
+directory for you backups. If, like me, you prefer to avoid putting all your
+data on a remote server that you don&amp;rsquo;t own then you can tweak the default
+configuration file ~/.mackup.cfg to use a local folder. My particular
+~/.mackup.cfg file is as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[storage]
+engine = file_system
+path = Documents/Computing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;execution&#34;&gt;Execution&lt;/h4&gt;
+
+&lt;p&gt;Once you have your configuration in place the following two commands are fairly
+self explanatory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mackup backup
+$ mackup restore
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
